@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    
+    <div class="movie-container">
+	    
+	    <form method = "POST" action = "Config">
+        
+		<table>
+		
+		<tr>
+		<td>
+        <select id="movie">
+		    <option value="12">Puss in Boots: The Last Wish($12)</option>
+            <option value="10">Avatar 2($10)</option>
+            <option value="8">Guardians of the Galaxy Vol.3($8)</option>
+            <option value="9">John Wick: Chapter 4($9)</option>
+        </select>
+		</td>
+		<td><input type = "date" name="mdate" class = "field" placeholder="Pick a date"></td>
+		</tr>
+
+
+		<tr><td>
+		<select name="showtime" class = "field">
+            <option value="10.30am">10.30 am</option>
+            <option value="01.45pm">01.45 pm</option>
+            <option value="04.15pm">04.15 pm</option>
+            <option value="07.30pm">07.30 pm</option>
+        </select></td>
+		<td><input type = "text" name="cname" class = "field" placeholder="Full Name"></td>
+		</tr>
+	    <tr>
+        <td><input type = "text" name="cmail" class = "field" placeholder="Email"></td>
+        <td><input type = "text" name="cno" class = "field" placeholder="Contact Number"></td>
+		</tr>
+        </table>
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+
+        <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+        </div>
+		
+		<br><input type = "submit" class = "btn" placeholder="Submit">
+		</form>
+    </div>
+
+    <p class="text">
+        You have selected <span id="count">0</span> seats for a price of $<span id="total">0</span>
+    </p>
+    <script src="script.js"></script>
+	
+	
+</body>
+</html>

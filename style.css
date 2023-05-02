@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242333;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Lato', 'sans-serif';
+	text-align:center;
+	
+}
+td{
+	width:150px;
+	text-align:center;
+	padding:10px
+}
+.seat {
+    background-color: #444451;
+    height: 24px;
+    width: 30px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.movie-container {
+    margin: 20px 0;
+}
+
+.movie-container select {
+	
+    background-color: #fff;
+    /*drop down color*/
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearence: none;
+    -webkit-appearence: none;
+	text-align:center;
+	width: 285px;
+}
+.field{
+	background-color: #fff;
+    /*drop down color*/
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearence: none;
+    -webkit-appearence: none;
+	text-align:center;
+	width: 285px;
+}
+.btn{
+	width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    background-color: #6feaf6;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color:#fff;
+    transition: .3s; 
+    -moz-appearence: none;
+    -webkit-appearence: none;
+	text-align:center;
+}
+.seat.selected {
+    background-color: #6feaf6;
+}
+
+.seat.occupied {
+    background-color: #fff;
+    /*occupied seats color*/
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 18px;
+    /*seat spacing*/
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 18px;
+    /*seat spacing*/
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    /*not occupied seat hover transition*/
+}
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 10ox;
+}
+
+.screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX('-45deg');
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
+}
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+p.text {
+    margin: 5px 0;
+}
+
+p.text span {
+    color: #6feaf6;
+}
+
+
+/* --------------------create group page--------------------------- */
+
+.body-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #242333;
+}
+
+.container-c {
+    width: 330px;
+    background: #242333;
+    border-radius: 5px;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+    ;
+}
+
+.container-c header {
+    font-weight: 600;
+    font-size: 35px;
+    margin: 0 0 30px 0;
+}
+
+.container-c .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-outer form {
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page-c {
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer form .page-c {
+    width: 25%;
+}
+
+.form-outer form .page-c .title-c {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+    color: #001618;
+}
+
+.form-outer form .page-c .field-c {
+    height: 45px;
+    width: 330px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+.form-outer form .page-c .field-c .lable-c {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+    color: rgb(185, 226, 255);
+}
+
+.form-outer form .page-c .field-c input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+.form-outer form .page-c .field-c input value {
+    font-size: 8px;
+}
+
+.form-outer form .page-c .field-c select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.form-outer form .page-c .field-c button {
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background: #46d3df;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-outer form .page-c .field-c button:hover {
+    background: rgb(0, 0, 0);
+}
+
+.form-outer form .page-c .btns button {
+    margin-top: -20px!important;
+}
+
+form .page-c .btns button.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page-c .btns button.next {
+    margin-left: 3px;
+    font-size: 17px;
+}
+
+.container-c .progress-bar {
+    display: flex;
+    margin: 40px 0;
+}
+
+.container-c .progress-bar .step {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.container-c-p {
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.progress-bar .step p {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(102, 148, 169);
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+
+.progress-bar .step p.active {
+    color: #6feaf6;
+}
+
+.progress-bar .step .bullet-c {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: 2px solid rgb(206, 206, 206);
+    display: inline-block;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.progress-bar .step .bullet-c.active {
+    border-color: #6feaf6;
+    background: #6feaf6;
+}
+
+.progress-bar .step:last-child .bullet-c::before,
+.progress-bar .step:last-child .bullet-c::after {
+    display: none;
+}
+
+.progress-bar .step .bullet-c::before,
+.progress-bar .step .bullet-c::after {
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: #d8d0d0;
+}
+
+.progress-bar .step .bullet-c.active::after {
+    background: #6feaf6;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step .bullet-c span {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-bar .step .bullet-c.active span {
+    display: none;
+}
+
+.progress-bar .step .check-c {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.progress-bar .step .check-c.active {
+    display: block;
+    color: #fff;
+}
+
+.about {
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
